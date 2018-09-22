@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^$', blog.index),
     url(r'^accounts/', include('users.urls')),
     url(r'^accounts/profile/', blog.accounts_profile),
+    url(r'^test_jinja/', blog.test_jinja),
     url(r'^admin/', admin.site.urls),
 ]

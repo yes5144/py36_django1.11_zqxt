@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- 是否打开 extends
+% extends 'baseblog.html' %
+-->
+
+{% block content %}<h2>here!!!</h2>{% endblock %}
+
+<!-- https://vuejs.org/v2/guide/   -->
+<div id="app-5">
+    <p>{{ message }}</p>
+    <button @click="reverseMessage">Reverse Message</button>
+</div>
+
+<script type="text/javascript">
+    var app5 = new Vue({
+        el: '#app-5',
+        data: {
+            message: 'Hello Vue.js!'
+        },
+        methods: {
+            reverseMessage: function () {
+                this.message = this.message.split('').reverse().join('');
+                data_to_send = {name: this.message};
+                console.log(data_to_send);
+
+            }
+        }
+    })
+</script>
+</body>
+</html>
