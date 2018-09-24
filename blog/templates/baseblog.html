@@ -9,6 +9,9 @@
     <script src="/static/js/bootstrap.js"></script>
     <!-- vue -->
     <script src="/static/js/vue.js"></script>
+    <script src="/static/js/vue-router.js"></script>
+    <!-- csrt token -->
+    <script src="/static/js/csrf.js"></script>
     {% block title %}
         <title>My First Page</title>
     {% endblock %}
@@ -114,6 +117,18 @@
                         phone: this.phone,
                     };
                     console.log(data_to_send);
+                    data_to_send = JSON.stringify(data_to_send);
+                    console.log(data_to_send);
+                    $.post('/accounts/profile/',
+                        data_to_send,
+                        function (r, err) {
+                            if(err === 'success'){
+                                alert('修改已保存')
+                                return location.assign('/');
+                            }else {
+                                return console.log(err);
+                            }
+                        });
                 }
             }
         });
