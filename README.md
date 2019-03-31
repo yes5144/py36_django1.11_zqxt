@@ -1,6 +1,7 @@
 # py36_django1.11_zqxt
 [Django 开发内容管理系统 -- 自强学堂](https://code.ziqiangxuetang.com/django/django-cms-develop.html)
 
+[Django 官方文档](https://docs.djangoproject.com/en/1.11/intro/install/)
 ## django 
 ### 
 
